@@ -50,6 +50,9 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 #### Autocompletion ###################
 
 # cycle through all matches with 'TAB' key
@@ -171,14 +174,14 @@ n()
 
 #### Display ########################
 
-echo -e "\e[0;37m"
-clear
-echo '████████╗███████╗██████╗ ███╗   ███╗██╗   ██╗██╗  ██╗'
-echo '╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║   ██║╚██╗██╔╝'
-echo '   ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║ ╚███╔╝ '
-echo '   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║ ██╔██╗ '
-echo '   ██║   ███████╗██║  ██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗'
-echo '   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝'
-echo
-echo
-echo
+# echo -e "\e[0;37m"
+# clear
+# echo '████████╗███████╗██████╗ ███╗   ███╗██╗   ██╗██╗  ██╗'
+# echo '╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║   ██║╚██╗██╔╝'
+# echo '   ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║ ╚███╔╝ '
+# echo '   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║ ██╔██╗ '
+# echo '   ██║   ███████╗██║  ██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗'
+# echo '   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝'
+# echo
+# echo
+# echo
